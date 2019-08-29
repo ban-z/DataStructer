@@ -1,0 +1,21 @@
+映射Map：（数学中的映射）存储数据对的的数据结构
+          键值对：Key & Value
+
+          使用链表 / 二分搜索树实现：Node节点的存储数据增加为两个变量：key，value
+
+          复杂度分析：
+
+                            LinkedListMap                                       BSTMap              平均
+
+           add                  O(n)                                              O(h)             O(log n)          O(n)
+
+           remove               O(n)                                              O(h)             O(log n)          O(n)
+
+           set                  O(n)                                              O(h)             O(log n)          O(n)
+
+           get                  O(n)                                              O(h)             O(log n)          O(n)
+
+           contains             O(n)                                              O(h)             O(log n)          O(n)
+
+
+           多重映射：可以存储具有重复键的键值对

@@ -1,0 +1,44 @@
+堆：二叉堆Binary Heap
+
+    二叉堆是一颗完全二叉树（要不满，要不在最后一层右边有空缺）
+
+    最大堆：在堆中某个节点的值总是不大于其父节点的值
+    层次低的节点不一定就比层次高的节点小
+
+    最大堆用数组实现（0位置不存元素）：
+                    parent = i / 2
+                    leftChild = 2 * i
+                    rightChild = 2 * i+ 1
+
+                    当位置0存元素时：
+                    parent = （i - 1） / 2
+                    leftChild = 2 * i + 1
+                    rightChild = 2 * i+ 2
+
+    特殊操作：Heapify 与 replace
+            replace：去除最大元素后，放入一个新元素
+                    1.先extractMax 后 add 2 * log n
+                    2.堆顶替换新元素，后siftDown
+
+            Heapify:将任意数组整理成堆的形状
+                    比一个一个add更加高效的操作 O(n * log n)
+
+                    从最后一个非叶子节点（拿到最后一个节点的父亲节点即可）开始siftDown操作 O(log n)
+
+
+    最小堆：类似
+
+
+
+
+    时间复杂度分析：add 与 extractMax 均为 O(log n)
+
+
+
+    扩展：d叉堆 d-ary heap
+         索引堆
+         二项堆
+         斐波那契堆
+
+         广义队列：只要支持队列操作接口，底层实现并不是太过关心
+                   栈，也可以当作一个队列
